@@ -29,13 +29,6 @@ VeloMax is a comprehensive management system for bicycle shops, built with C# an
   - Customer loyalty program statistics
   - Stock level monitoring and alerts
 
-## Technical Details
-- Built with C# and .NET 7.0
-- MySQL database backend
-- Console-based user interface
-- Modular architecture for easy maintenance
-
-
 ## Installation
 1. Set up MySQL server and import the SQL schema files from the `/Serveur` directory
 2. Configure the connection strings in the application to match your database settings

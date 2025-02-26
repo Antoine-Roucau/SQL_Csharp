@@ -1,0 +1,57 @@
+-- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
+--
+-- Host: localhost    Database: velomax
+-- ------------------------------------------------------
+-- Server version	8.0.36
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `fournisseurcommande`
+--
+
+DROP TABLE IF EXISTS `fournisseurcommande`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `fournisseurcommande` (
+  `idFournisseurCommande` int NOT NULL AUTO_INCREMENT,
+  `idFournisseur` int DEFAULT NULL,
+  `idPieceChezFournisseur` int DEFAULT NULL,
+  `delaisLivraison` datetime DEFAULT NULL,
+  `prixAchat` int DEFAULT NULL,
+  `quantitePiece` int DEFAULT NULL,
+  PRIMARY KEY (`idFournisseurCommande`),
+  KEY `idFournisseur` (`idFournisseur`),
+  CONSTRAINT `fournisseurcommande_ibfk_1` FOREIGN KEY (`idFournisseur`) REFERENCES `fournisseur` (`idFournisseur`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `fournisseurcommande`
+--
+
+LOCK TABLES `fournisseurcommande` WRITE;
+/*!40000 ALTER TABLE `fournisseurcommande` DISABLE KEYS */;
+INSERT INTO `fournisseurcommande` VALUES (1,1,25,'2024-05-10 08:00:00',200,30),(2,3,26,'2024-05-15 10:00:00',250,25),(3,2,27,'2024-05-12 09:00:00',40,60),(4,4,28,'2024-05-17 11:00:00',60,45),(5,6,29,'2024-05-14 07:00:00',120,45),(6,5,30,'2024-05-19 12:00:00',80,60),(7,2,31,'2024-05-10 08:00:00',60,70),(8,1,32,'2024-05-15 10:00:00',50,80),(9,3,33,'2024-05-12 09:00:00',180,30),(10,2,34,'2024-05-17 11:00:00',200,25),(11,2,35,'2024-05-14 07:00:00',180,30),(12,1,36,'2024-05-19 12:00:00',200,25),(13,5,37,'2024-05-10 08:00:00',300,20),(14,6,38,'2024-05-15 10:00:00',150,30),(15,4,39,'2024-05-12 09:00:00',300,20),(16,5,40,'2024-05-17 11:00:00',150,30),(17,1,41,'2024-05-14 07:00:00',7,100),(18,1,42,'2024-05-19 12:00:00',7,100),(19,6,43,'2024-05-10 08:00:00',50,40),(20,5,44,'2024-05-15 10:00:00',80,30),(21,4,45,'2024-05-12 09:00:00',60,40),(22,3,46,'2024-05-17 11:00:00',50,50),(23,2,47,'2024-05-14 07:00:00',20,60),(24,1,48,'2024-05-19 12:00:00',30,50);
+/*!40000 ALTER TABLE `fournisseurcommande` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2025-02-26 18:28:11

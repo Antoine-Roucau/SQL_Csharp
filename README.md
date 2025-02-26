@@ -35,13 +35,6 @@ VeloMax is a comprehensive management system for bicycle shops, built with C# an
 - Console-based user interface
 - Modular architecture for easy maintenance
 
-## Database Structure
-The system uses a relational database with tables for:
-- Bicycles and parts inventory
-- Customer data
-- Orders and sales
-- Employees and stores
-- Suppliers and procurement
 
 ## Installation
 1. Set up MySQL server and import the SQL schema files from the `/Serveur` directory
